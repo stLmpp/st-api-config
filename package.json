@@ -1,6 +1,6 @@
 {
   "name": "@assis-delivery/config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "homepage": "https://github.com/assis-delivery/config#readme",
   "bugs": {
@@ -19,7 +19,8 @@
     "package.json",
     "README.md",
     "LICENSE.md",
-    "dist"
+    "dist",
+    ".eslintrc.js"
   ],
   "scripts": {
     "build": "tsup"
