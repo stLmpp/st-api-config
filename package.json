@@ -1,0 +1,38 @@
+{
+  "name": "@assis-delivery/config",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/assis-delivery/config#readme",
+  "bugs": {
+    "url": "https://github.com/assis-delivery/config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assis-delivery/config.git"
+  },
+  "license": "MIT",
+  "author": "stLmpp",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE.md",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.19",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "rimraf": "^5.0.1",
+    "tsup": "^7.2.0",
+    "unplugin-swc": "^1.4.2",
+    "vitest": "^0.34.5"
+  }
+}
