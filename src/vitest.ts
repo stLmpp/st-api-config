@@ -25,12 +25,10 @@ export const vitestConfig = defineConfig(async (_) => {
         reporter: ['text', 'html', 'json', 'lcovonly'],
         cleanOnRerun: false,
         exclude: [
-          'vitest.setup.ts',
           '**/index.ts',
-          '**/*.{type,schema,token,module,config}.ts',
-          '**/*.d.ts',
-          '**/*.{c|m}js',
+          '**/*.{type,schema,token,module,config,dto}.ts',
         ],
+        include: ['src/**/*.ts'],
       },
     },
     plugins: [
