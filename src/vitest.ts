@@ -26,10 +26,10 @@ export const vitestConfig = defineConfig(async (_) => {
         cleanOnRerun: false,
         exclude: [
           'vitest.setup.ts',
-          '.eslintrc.cjs',
           '**/index.ts',
           '**/*.{type,schema,token,module,config}.ts',
           '**/*.d.ts',
+          '**/*.{c|m}js',
         ],
       },
     },
