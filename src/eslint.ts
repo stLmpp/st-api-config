@@ -200,6 +200,8 @@ export = {
           Ref: true,
           env: true,
           Env: true,
+          dev: true,
+          Dev: true,
         },
       },
     ],
