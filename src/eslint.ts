@@ -208,6 +208,8 @@ export = {
     'unicorn/no-array-reduce': 'off',
     'unicorn/prefer-top-level-await': 'off',
     'unicorn/explicit-length-check': 'off',
+    'unicorn/no-null': 'off',
+    'unicorn/throw-new-error': 'off'
   },
   settings: {
     'import/resolver': {

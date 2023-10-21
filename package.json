@@ -1,14 +1,14 @@
 {
-  "name": "@assis-delivery/config",
-  "version": "1.0.4",
+  "name": "@st-api/config",
+  "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/assis-delivery/config#readme",
+  "homepage": "https://github.com/stLmpp/st-api-config#readme",
   "bugs": {
-    "url": "https://github.com/assis-delivery/config/issues"
+    "url": "https://github.com/stLmpp/st-api-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/assis-delivery/config.git"
+    "url": "git+https://github.com/stLmpp/st-api-config.git"
   },
   "license": "MIT",
   "author": "stLmpp",
@@ -31,9 +31,9 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "rimraf": "^5.0.1",
+    "rimraf": "^5.0.5",
     "tsup": "^7.2.0",
-    "unplugin-swc": "^1.4.2",
-    "vitest": "^0.34.5"
+    "unplugin-swc": "^1.4.3",
+    "vitest": "^0.34.6"
   }
 }
