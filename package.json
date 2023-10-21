@@ -1,7 +1,7 @@
 {
   "name": "@st-api/config",
   "version": "1.0.0",
-  "description": "",
+  "description": "ST-API Configs",
   "homepage": "https://github.com/stLmpp/st-api-config#readme",
   "bugs": {
     "url": "https://github.com/stLmpp/st-api-config/issues"
