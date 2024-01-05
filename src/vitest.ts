@@ -2,6 +2,7 @@ import swc from 'unplugin-swc';
 import { defineConfig } from 'vitest/config';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import { CoverageReporter } from 'vitest';
 
 export const vitestConfig = defineConfig(async (_) => {
   const packageJsonFile = await readFile(
@@ -17,12 +18,14 @@ export const vitestConfig = defineConfig(async (_) => {
       root: './',
       coverage: {
         enabled: true,
-        branches: 70,
-        functions: 70,
-        lines: 70,
-        statements: 70,
+        thresholds: {
+          branches: 70,
+          functions: 70,
+          lines: 70,
+          statements: 70,
+        },
         all: true,
-        reporter: ['text', 'html', 'json', 'lcovonly'],
+        reporter: ['text', 'html', 'json', 'lcovonly'] as CoverageReporter[],
         cleanOnRerun: false,
         exclude: [
           '**/index.ts',
