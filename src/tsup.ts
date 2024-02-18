@@ -4,7 +4,7 @@ import { Options } from 'tsup';
 export const tsupConfig: Options = {
   entry: ['src/index.ts'],
   sourcemap: true,
-  minify: true,
+  minify: false,
   dts: true,
   format: 'esm',
   platform: 'node',

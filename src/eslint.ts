@@ -78,7 +78,6 @@ export = {
       'error',
       { types: { object: false }, extendDefaults: true },
     ],
-
     '@typescript-eslint/naming-convention': [
       'off',
       {
@@ -186,30 +185,12 @@ export = {
       },
     ],
     'import/no-unresolved': ['off'],
-    'unicorn/prevent-abbreviations': [
-      'error',
-      {
-        allowList: {
-          Param: true,
-          param: true,
-          Params: true,
-          params: true,
-          args: true,
-          Args: true,
-          ref: true,
-          Ref: true,
-          env: true,
-          Env: true,
-          dev: true,
-          Dev: true,
-        },
-      },
-    ],
+    'unicorn/prevent-abbreviations': ['off'],
     'unicorn/no-array-reduce': 'off',
     'unicorn/prefer-top-level-await': 'off',
     'unicorn/explicit-length-check': 'off',
     'unicorn/no-null': 'off',
-    'unicorn/throw-new-error': 'off'
+    'unicorn/throw-new-error': 'off',
   },
   settings: {
     'import/resolver': {
