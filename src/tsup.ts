@@ -13,7 +13,7 @@ export const tsupConfig: Options = {
     {
       name: 'clean',
       buildStart: async () => {
-        await fs.rm('dist');
+        await fs.rm('dist', { force: true, recursive: true });
       },
     },
   ],
