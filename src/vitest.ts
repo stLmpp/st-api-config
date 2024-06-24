@@ -1,18 +1,25 @@
 import swc from 'unplugin-swc';
-import { defineConfig } from 'vitest/config';
-import { readFile } from 'node:fs/promises';
-import { join } from 'node:path';
-import { CoverageReporter } from 'vitest';
+import type { UserConfigFnPromise } from 'vitest/config';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import type { CoverageReporter } from 'vitest';
 
-export const vitestConfig = defineConfig(async (_) => {
-  const packageJsonFile = await readFile(
-    join(process.cwd(), 'package.json'),
-    'utf8',
-  );
-  const name = JSON.parse(packageJsonFile)?.name;
+async function tryGetName() {
+  try {
+    const packageJsonFile = await fs.readFile(
+      path.join(process.cwd(), 'package.json'),
+      'utf8',
+    );
+    return JSON.parse(packageJsonFile)?.name;
+  } catch {
+    return undefined;
+  }
+}
+
+export const vitestConfig: UserConfigFnPromise = async (_) => {
   return {
     test: {
-      name,
+      name: await tryGetName(),
       environment: 'node',
       globals: true,
       root: './',
@@ -34,4 +41,4 @@ export const vitestConfig = defineConfig(async (_) => {
       }),
     ],
   };
-});
+};
