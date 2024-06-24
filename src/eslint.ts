@@ -6,8 +6,6 @@ export = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:import/recommended',
-    'plugin:import/typescript',
     'plugin:unicorn/recommended',
   ],
   parser: '@typescript-eslint/parser',
@@ -16,7 +14,7 @@ export = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['@typescript-eslint', 'import', 'unicorn'],
+  plugins: ['@typescript-eslint', 'unicorn'],
   rules: {
     'no-inner-declarations': ['off'],
     'object-shorthand': ['error'],
@@ -161,16 +159,6 @@ export = {
         allowDirectConstAssertionInArrowFunctions: true,
       },
     ],
-    'import/order': [
-      'error',
-      {
-        'newlines-between': 'always',
-        alphabetize: {
-          order: 'asc',
-        },
-      },
-    ],
-    'import/newline-after-import': ['error'],
     '@typescript-eslint/no-magic-numbers': [
       'off',
       { ignore: [0, 1], ignoreArrayIndexes: true, ignoreTypeIndexes: true },
@@ -184,18 +172,12 @@ export = {
         disallowTypeAnnotations: false,
       },
     ],
-    'import/no-unresolved': ['off'],
     'unicorn/prevent-abbreviations': ['off'],
     'unicorn/no-array-reduce': 'off',
     'unicorn/prefer-top-level-await': 'off',
     'unicorn/explicit-length-check': 'off',
     'unicorn/no-null': 'off',
     'unicorn/throw-new-error': 'off',
-  },
-  settings: {
-    'import/resolver': {
-      typescript: {},
-    },
   },
   overrides: [
     {

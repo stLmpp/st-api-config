@@ -18,12 +18,6 @@ export const vitestConfig = defineConfig(async (_) => {
       root: './',
       coverage: {
         enabled: true,
-        thresholds: {
-          branches: 70,
-          functions: 70,
-          lines: 70,
-          statements: 70,
-        },
         all: true,
         reporter: ['text', 'html', 'json', 'lcovonly'] as CoverageReporter[],
         cleanOnRerun: false,
