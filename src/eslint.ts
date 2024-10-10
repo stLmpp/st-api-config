@@ -7,8 +7,14 @@ import type { TSESLint } from '@typescript-eslint/utils';
 
 export const eslint: TSESLint.FlatConfig.ConfigArray = tseslint.config(
   js.configs.recommended,
-  ...tseslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
   {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
     rules: {
       'no-inner-declarations': ['off'],
       'object-shorthand': ['error'],
