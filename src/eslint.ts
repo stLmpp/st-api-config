@@ -1,47 +1,14 @@
-import type { Linter } from 'eslint';
-
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import globals from 'globals';
-import tsParser from '@typescript-eslint/parser';
-import path from 'node:path';
-import url from 'node:url';
-// @ts-expect-error
-import js from '@eslint/js';
-// @ts-expect-error
-import { FlatCompat } from '@eslint/eslintrc';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
+import js from '@eslint/js';
+import tseslint from 'typescript-eslint';
+import type { TSESLint } from '@typescript-eslint/utils';
 
-export const eslint = [
-  ...compat.extends(
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-  ),
+export const eslint: TSESLint.FlatConfig.ConfigArray = tseslint.config(
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
   {
-    plugins: {
-      '@typescript-eslint': typescriptEslint,
-    },
-
-    languageOptions: {
-      globals: {
-        ...globals.node,
-      },
-
-      parser: tsParser,
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      parserOptions: {
-        project: 'tsconfig.json',
-      },
-    },
-
     rules: {
       'no-inner-declarations': ['off'],
       'object-shorthand': ['error'],
@@ -214,10 +181,4 @@ export const eslint = [
       'unicorn/throw-new-error': 'off',
     },
   },
-  {
-    files: ['**/*.spec.ts'],
-    rules: {
-      '@typescript-eslint/no-magic-numbers': 'off',
-    },
-  },
-] satisfies Linter.Config[];
+);
