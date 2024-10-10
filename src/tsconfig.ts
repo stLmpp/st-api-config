@@ -6,7 +6,7 @@ export default {
     emitDecoratorMetadata: true,
     experimentalDecorators: true,
     allowSyntheticDefaultImports: true,
-    target: 'es2021',
+    target: 'ES2022',
     sourceMap: true,
     outDir: './dist',
     incremental: true,

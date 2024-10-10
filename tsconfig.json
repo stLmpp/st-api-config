@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "declaration": true,
     "allowSyntheticDefaultImports": true,
-    "target": "esnext",
+    "target": "ESNext",
     "sourceMap": true,
     "outDir": "./dist",
     "skipLibCheck": true,
@@ -13,7 +13,8 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "noEmit": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "allowJs": true
   },
   "exclude": ["*.js"]
 }

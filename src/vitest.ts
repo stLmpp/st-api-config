@@ -1,12 +1,12 @@
 import swc from 'unplugin-swc';
 import type { UserConfigFnPromise } from 'vitest/config';
-import fs from 'node:fs/promises';
+import fsp from 'node:fs/promises';
 import path from 'node:path';
-import type { CoverageReporter } from 'vitest';
+import type { CoverageReporter } from 'vitest/node';
 
 async function tryGetName() {
   try {
-    const packageJsonFile = await fs.readFile(
+    const packageJsonFile = await fsp.readFile(
       path.join(process.cwd(), 'package.json'),
       'utf8',
     );
