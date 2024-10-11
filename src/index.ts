@@ -1,3 +1,4 @@
-export { prettierConfig } from './prettier';
-export { vitestConfig } from './vitest';
-export { tsupConfig } from './tsup';
+export { prettierConfig } from './prettier.js';
+export { vitestConfig } from './vitest.js';
+export { tsupConfig } from './tsup.js';
+export { eslint } from './eslint.js';
