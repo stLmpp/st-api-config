@@ -187,4 +187,7 @@ export const eslint: TSESLint.FlatConfig.ConfigArray = tseslint.config(
       'unicorn/throw-new-error': 'off',
     },
   },
+  {
+    ignores: ['eslint.config.{mjs,cjs,js}', '.prettierrc.{mjs,cjs,js}'],
+  },
 );
