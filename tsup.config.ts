@@ -7,12 +7,6 @@ export default defineConfig({
   entry: {
     index: './src/index.ts',
   },
-  experimentalDts: {
-    entry: {
-      index: './src/index.ts',
-    },
-  },
-  format: 'esm',
   tsconfig: 'tsconfig.json',
   plugins: [
     ...(tsupConfig.plugins ?? []),

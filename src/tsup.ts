@@ -10,7 +10,7 @@ export const tsupConfig: Options = {
   tsconfig: 'tsconfig.build.json',
   clean: true,
   banner: () => ({
-    js: `Built on ${new Date().toISOString()}`,
+    js: `// Built on ${new Date().toISOString()}`,
   }),
   removeNodeProtocol: false,
 };
