@@ -188,6 +188,6 @@ export const eslint: TSESLint.FlatConfig.ConfigArray = tseslint.config(
     },
   },
   {
-    ignores: ['eslint.config.{mjs,cjs,js}', '.prettierrc.{mjs,cjs,js}'],
+    ignores: ['**/*.{js,mjs,cjs}'],
   },
 );
